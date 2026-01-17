@@ -15,7 +15,7 @@ Constraints: Single-sceen, B&W, top-down fixed-camera... one-hit non-bipedal mon
 - [ ] Salamander Spin Attack anim
 - [ ] Salamander Spin Attack hitbox anim
 - [ ] Salamander Spin Attack hurtbox anim
-- [ ] Salamander Atack FX
+- [ ] Salamander Attack FX
 - [ ] Character controller
 - [ ] Level greybox mesh
 - [ ] Level env art mesh
