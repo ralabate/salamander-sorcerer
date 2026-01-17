@@ -29,7 +29,3 @@ Joint Placement: https://www.youtube.com/watch?v=urC_TBQQA7o
 Weight Painting: https://www.youtube.com/watch?v=xu73Yqgju14
 
 Sword Swipe FX: https://www.3dfiggins.com/Store/Support/SwordSwipe/
-
-Alias Char Setup: https://pierrekueny.fr/AncienSite/ati/partie1/animation/character/character.pdf
-
-Autodesk Char Setup: https://help.autodesk.com/view/MAYAUL/2026/ENU/?guid=GUID-0D0DCBE5-01BA-4AA2-BC4D-85C3285933AD
