@@ -34,7 +34,7 @@ Joint Placement: https://www.youtube.com/watch?v=urC_TBQQA7o
 
 Weight Painting: https://www.youtube.com/watch?v=xu73Yqgju14
 
-Layered Anim Workflow: https://vimeo.com/348381510
+Graph Editor: https://www.youtube.com/watch?v=tii1uu9syPs
 
 Sword Swipe FX: https://www.3dfiggins.com/Store/Support/SwordSwipe/
 
