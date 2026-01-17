@@ -18,8 +18,9 @@ Constraints: Single-sceen, B&W, top-down fixed-camera... one-hit non-bipedal mon
 - [ ] Salamander Attack FX
 - [ ] Character controller
 - [ ] Level greybox mesh
-- [ ] Level env art mesh
-
+- [ ] Level env mesh
+- [ ] Level env FX
+- [ ] Level skybox
 
 # Character Creation Tuts
 
