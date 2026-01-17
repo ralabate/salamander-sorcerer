@@ -22,10 +22,17 @@ Constraints: Single-sceen, B&W, top-down fixed-camera... one-hit non-bipedal mon
 
 # Character Creation Tuts
 
+Reilly Rough Sketch: https://www.youtube.com/watch?v=Vx9NjK2aUeE
+
+Cleanup Sketch: https://www.youtube.com/watch?v=cfB6ol7qdlM
+
 Box Modeling: https://www.youtube.com/watch?v=ik2OHlcwUU0
 
 Joint Placement: https://www.youtube.com/watch?v=urC_TBQQA7o
 
 Weight Painting: https://www.youtube.com/watch?v=xu73Yqgju14
 
+Layered Anim Workflow: https://vimeo.com/348381510
+
 Sword Swipe FX: https://www.3dfiggins.com/Store/Support/SwordSwipe/
+
