@@ -6,7 +6,7 @@ Casting: Carlos on code and game design and level design, Nicholas on visuals an
 Constraints: Single-sceen, B&W, top-down fixed-camera... one-hit non-bipedal monsters...
 
 # TODO
-- [ ] Salamander Model Sheet
+- [x] Salamander Model Sheet
 - [ ] Salamander Model
 - [ ] Salamander Rig
 - [ ] Salamander Swipe Attack anim
