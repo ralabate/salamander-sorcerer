@@ -1,0 +1,103 @@
+[gd_scene load_steps=7 format=3 uid="uid://d3l7dwjff10l3"]
+
+[ext_resource type="PackedScene" uid="uid://c7gckhdb1qr1l" path="res://player.tscn" id="1_ig7tw"]
+
+[sub_resource type="Environment" id="Environment_ig7tw"]
+background_mode = 1
+ambient_light_source = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ig7tw"]
+albedo_color = Color(0.27752772, 0.27752772, 0.27752772, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
+albedo_color = Color(0.5409905, 0.5409905, 0.5409905, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2yge"]
+albedo_color = Color(0.0885599, 0.0885599, 0.0885599, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ig7tw"]
+material = SubResource("StandardMaterial3D_h2yge")
+
+[node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ig7tw")
+
+[node name="Player" parent="." instance=ExtResource("1_ig7tw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+use_collision = true
+metadata/_edit_lock_ = true
+
+[node name="Floor" type="CSGBox3D" parent="CSGCombiner3D"]
+size = Vector3(40, 1, 30)
+material = SubResource("StandardMaterial3D_ig7tw")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 4, -13.5)
+size = Vector3(10, 7, 2)
+material = SubResource("StandardMaterial3D_0xm2m")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, -11.5, 4, 9.5)
+size = Vector3(10, 7, 2)
+material = SubResource("StandardMaterial3D_0xm2m")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, 16.5, 4, 1)
+size = Vector3(2, 7, 19)
+material = SubResource("StandardMaterial3D_0xm2m")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 8, -10)
+size = Vector3(10, 15, 7)
+material = SubResource("StandardMaterial3D_0xm2m")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 20, 30)
+fov = 45.0
+size = 45.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.25881904, 0, -0.25881904, 0.9659258, 0, 23, 37)
+
+[node name="Baddie" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1.5, 0)
+mesh = SubResource("CapsuleMesh_ig7tw")
+skeleton = NodePath("../CSGCombiner3D")
+
+[node name="Baddie2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 1.5, -9)
+mesh = SubResource("CapsuleMesh_ig7tw")
+skeleton = NodePath("../CSGCombiner3D")
+
+[node name="Baddie3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.5, 8)
+mesh = SubResource("CapsuleMesh_ig7tw")
+skeleton = NodePath("../CSGCombiner3D")
+
+[node name="Baddie4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1.5, 9)
+mesh = SubResource("CapsuleMesh_ig7tw")
+skeleton = NodePath("../CSGCombiner3D")
+
+[node name="Baddie5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.5, -8)
+mesh = SubResource("CapsuleMesh_ig7tw")
+skeleton = NodePath("../CSGCombiner3D")
+
+[node name="Baddie6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.5, -6)
+mesh = SubResource("CapsuleMesh_ig7tw")
+skeleton = NodePath("../CSGCombiner3D")
+
+[node name="Baddie7" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1.5, -2)
+mesh = SubResource("CapsuleMesh_ig7tw")
+skeleton = NodePath("../CSGCombiner3D")
+
+[node name="Baddie8" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1.5, 5)
+mesh = SubResource("CapsuleMesh_ig7tw")
+skeleton = NodePath("../CSGCombiner3D")
