@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://683iuish3sen"]
+
+[ext_resource type="PackedScene" uid="uid://bu7b08xpngewo" path="res://salamander_sorcerer_model_wip_v001.fbx" id="1_rwspt"]
+
+[node name="SalamanderVisual" instance=ExtResource("1_rwspt")]
