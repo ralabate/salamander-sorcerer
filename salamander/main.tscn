@@ -7,10 +7,9 @@ background_mode = 1
 ambient_light_source = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
-albedo_color = Color(0.5409905, 0.5409905, 0.5409905, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1bvp3"]
-albedo_color = Color(0.2784314, 0.2784314, 0.2784314, 1)
+albedo_color = Color(0.5689727, 0.56897277, 0.5689727, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2yge"]
 albedo_color = Color(0, 0, 0, 1)
