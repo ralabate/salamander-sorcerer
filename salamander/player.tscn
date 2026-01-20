@@ -27,4 +27,3 @@ visible = false
 mesh = SubResource("CapsuleMesh_sh265")
 
 [node name="SalamanderVisual" parent="." instance=ExtResource("2_onrkg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8034904, 0)
