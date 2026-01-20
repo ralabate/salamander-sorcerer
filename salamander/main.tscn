@@ -1,13 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://d3l7dwjff10l3"]
+[gd_scene load_steps=7 format=3 uid="uid://d3l7dwjff10l3"]
 
 [ext_resource type="PackedScene" uid="uid://c7gckhdb1qr1l" path="res://player.tscn" id="1_ig7tw"]
 
 [sub_resource type="Environment" id="Environment_ig7tw"]
 background_mode = 1
 ambient_light_source = 1
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ig7tw"]
-albedo_color = Color(0.27752772, 0.27752772, 0.27752772, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
 albedo_color = Color(0.5409905, 0.5409905, 0.5409905, 1)
@@ -33,29 +30,34 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 use_collision = true
 metadata/_edit_lock_ = true
 
-[node name="Floor" type="CSGBox3D" parent="CSGCombiner3D"]
-visible = false
-size = Vector3(35, 1, 35)
-material = SubResource("StandardMaterial3D_ig7tw")
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 2, -14.5)
-size = Vector3(10, 3, 2)
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.834936, 1.25, 1.3839746)
+size = Vector3(5, 1.5, 1)
 material = SubResource("StandardMaterial3D_0xm2m")
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, -12.5, 2, 3.5)
-size = Vector3(10, 3, 2)
+[node name="CSGBox3D7" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.165064, 1.25, -7.1160254)
+size = Vector3(5, 1.5, 1)
+material = SubResource("StandardMaterial3D_0xm2m")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.834936, 1, 12.383974)
+size = Vector3(5, 1, 1)
 material = SubResource("StandardMaterial3D_0xm2m")
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, 12.794096, 4, -1.829629)
-size = Vector3(2, 7, 9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.165064, 1, 1.3839746)
+size = Vector3(5, 1, 1)
 material = SubResource("StandardMaterial3D_0xm2m")
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -8.5, 2, -7)
-size = Vector3(10, 3, 3)
+[node name="CSGBox3D8" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.915064, 1, 6.8839746)
+size = Vector3(2.5, 1, 3)
+material = SubResource("StandardMaterial3D_0xm2m")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.165064, 1, 11.383974)
+size = Vector3(5, 1, 1)
 material = SubResource("StandardMaterial3D_0xm2m")
 
 [node name="CircularFloor" type="CSGCylinder3D" parent="CSGCombiner3D"]
@@ -64,8 +66,17 @@ height = 1.0
 sides = 17
 material = SubResource("StandardMaterial3D_1bvp3")
 
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+size = Vector3(4, 5, 1)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+operation = 2
+size = Vector3(3, 4.5, 3)
+
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 26.95, 31.59)
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 26.5, 32)
 fov = 35.0
 size = 23.857
 
