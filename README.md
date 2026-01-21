@@ -39,5 +39,5 @@ Graph Editor: https://www.youtube.com/watch?v=tii1uu9syPs
 
 Sword Swipe FX: https://www.3dfiggins.com/Store/Support/SwordSwipe/
 
-From Maya to Godot: https://www.youtube.com/watch?v=XbE6kBlntSU
+Publish to Godot: https://www.youtube.com/watch?v=XbE6kBlntSU
 
