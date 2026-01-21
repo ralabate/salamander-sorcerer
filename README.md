@@ -37,7 +37,7 @@ Weight Painting: https://www.youtube.com/watch?v=xu73Yqgju14
 
 Graph Editor: https://www.youtube.com/watch?v=tii1uu9syPs
 
-From Maya to Godot: https://www.youtube.com/watch?v=XbE6kBlntSU
-
 Sword Swipe FX: https://www.3dfiggins.com/Store/Support/SwordSwipe/
+
+From Maya to Godot: https://www.youtube.com/watch?v=XbE6kBlntSU
 
