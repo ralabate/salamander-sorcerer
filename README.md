@@ -7,7 +7,7 @@ Constraints: Single-sceen, B&W, top-down fixed-camera... one-hit non-bipedal mon
 
 # TODO
 - [x] Salamander Model Sheet
-- [ ] Salamander Model
+- [x] Salamander Model
 - [ ] Salamander Rig
 - [ ] Salamander Swipe Attack anim
 - [ ] Salamander Swipe Attack hitbox anim
@@ -36,6 +36,8 @@ Joint Placement: https://www.youtube.com/watch?v=urC_TBQQA7o
 Weight Painting: https://www.youtube.com/watch?v=xu73Yqgju14
 
 Graph Editor: https://www.youtube.com/watch?v=tii1uu9syPs
+
+From Maya to Godot: https://www.youtube.com/watch?v=XbE6kBlntSU
 
 Sword Swipe FX: https://www.3dfiggins.com/Store/Support/SwordSwipe/
 
