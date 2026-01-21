@@ -27,3 +27,4 @@ visible = false
 mesh = SubResource("CapsuleMesh_sh265")
 
 [node name="SalamanderVisual" parent="." instance=ExtResource("2_onrkg")]
+unique_name_in_owner = true
