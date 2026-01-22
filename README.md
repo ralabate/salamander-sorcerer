@@ -39,5 +39,7 @@ Graph Editor: https://www.youtube.com/watch?v=tii1uu9syPs
 
 Sword Swipe FX: https://www.3dfiggins.com/Store/Support/SwordSwipe/
 
+UV Assignation: https://www.youtube.com/watch?v=6TJr0G71U14
+
 Publish to Godot: https://www.youtube.com/watch?v=XbE6kBlntSU
 
