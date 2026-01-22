@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c1pgm8qtpsko2"
-path="res://.godot/imported/mando.fbx-bafb6433a8541ac21cf0c6a13f81d441.scn"
+uid="uid://qp5q4e11b74c"
+path="res://.godot/imported/sword.fbx-f4eb4131e8b0a7cec89d58462903df07.scn"
 
 [deps]
 
-source_file="res://models/mando.fbx"
-dest_files=["res://.godot/imported/mando.fbx-bafb6433a8541ac21cf0c6a13f81d441.scn"]
+source_file="res://models/sword.fbx"
+dest_files=["res://.godot/imported/sword.fbx-f4eb4131e8b0a7cec89d58462903df07.scn"]
 
 [params]
 

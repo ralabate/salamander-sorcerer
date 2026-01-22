@@ -1,9 +1,9 @@
 [gd_scene load_steps=12 format=3 uid="uid://683iuish3sen"]
 
-[ext_resource type="PackedScene" uid="uid://c1pgm8qtpsko2" path="res://animations/mando.fbx" id="1_rwspt"]
+[ext_resource type="PackedScene" uid="uid://c1pgm8qtpsko2" path="res://models/mando.fbx" id="1_rwspt"]
 [ext_resource type="Animation" uid="uid://dt7oepwjr3rvd" path="res://animations/mando_idle.res" id="2_fj2ko"]
-[ext_resource type="PackedScene" uid="uid://bl5sqculk0hck" path="res://sword.fbx" id="2_vqn31"]
-[ext_resource type="Animation" uid="uid://coyhkugh770c5" path="res://animations/mando_swipe.res" id="3_vqn31"]
+[ext_resource type="PackedScene" uid="uid://qp5q4e11b74c" path="res://models/sword.fbx" id="2_vqn31"]
+[ext_resource type="Animation" uid="uid://evftl2wychy7" path="res://animations/mando_swipe.res" id="3_vqn31"]
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xv1ao"]
 _data = {
