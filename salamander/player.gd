@@ -21,4 +21,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = 0
 		velocity.z = 0
 
+	if direction != Vector3.ZERO:
+		visual.look_at(visual.global_position + direction, Vector3.UP, true)
+
 	move_and_slide()
