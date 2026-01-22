@@ -27,28 +27,26 @@ advance_mode = 2
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_gblxj"]
-states/mando_mando_idle/node = SubResource("AnimationNodeAnimation_vqn31")
-states/mando_mando_idle/position = Vector2(365, 97)
-states/mando_mando_swipe/node = SubResource("AnimationNodeAnimation_xv1ao")
-states/mando_mando_swipe/position = Vector2(640, 191)
-transitions = ["mando_mando_idle", "mando_mando_swipe", SubResource("AnimationNodeStateMachineTransition_n0fsh"), "mando_mando_swipe", "mando_mando_idle", SubResource("AnimationNodeStateMachineTransition_8u4em"), "Start", "mando_mando_idle", SubResource("AnimationNodeStateMachineTransition_vqn31")]
+states/mando_idle/node = SubResource("AnimationNodeAnimation_vqn31")
+states/mando_idle/position = Vector2(365, 97)
+states/mando_swipe/node = SubResource("AnimationNodeAnimation_xv1ao")
+states/mando_swipe/position = Vector2(640, 191)
+transitions = ["mando_idle", "mando_swipe", SubResource("AnimationNodeStateMachineTransition_n0fsh"), "mando_swipe", "mando_idle", SubResource("AnimationNodeStateMachineTransition_8u4em"), "Start", "mando_idle", SubResource("AnimationNodeStateMachineTransition_vqn31")]
 
 [node name="SalamanderVisual" instance=ExtResource("1_rwspt")]
 
 [node name="Skeleton3D" parent="." index="0"]
-bones/1/rotation = Quaternion(0, 0.008173225, 0, 0.9999666)
-bones/2/rotation = Quaternion(0, -0.0069617284, 0, 0.9999758)
-bones/3/rotation = Quaternion(0, -0.0069641783, 0, 0.9999758)
-bones/4/rotation = Quaternion(0, -0.0069641783, 0, 0.9999758)
-bones/5/rotation = Quaternion(-0.29895785, 0.8881201, 0.044925317, 0.34619173)
-bones/6/rotation = Quaternion(3.308722e-24, 0.5694711, -6.617444e-24, 0.8220113)
-bones/7/rotation = Quaternion(-1.0339758e-25, -0.03204824, 2.0679515e-25, 0.9994863)
-bones/9/rotation = Quaternion(-0.04492194, -0.34618172, -0.29895836, 0.8881239)
-bones/10/rotation = Quaternion(9.961993e-18, 0.5694805, 3.1079298e-16, 0.822005)
-bones/11/rotation = Quaternion(1.5509636e-25, -0.03204824, -1.0339758e-25, 0.9994863)
+bones/1/rotation = Quaternion(0, 0, -2.4651903e-32, 1)
+bones/2/rotation = Quaternion(0, 0, -2.4651903e-32, 1)
+bones/3/rotation = Quaternion(0, 0, -2.4651903e-32, 1)
+bones/4/rotation = Quaternion(0, 0, -2.4651903e-32, 1)
+bones/6/rotation = Quaternion(3.8869075e-17, 0.5955227, -2.3753324e-16, 0.80333847)
+bones/7/rotation = Quaternion(-1.3877788e-17, 0, -6.938894e-18, 1)
+bones/10/rotation = Quaternion(-4.318787e-18, 0.5955227, -3.4550292e-17, 0.80333847)
+bones/11/rotation = Quaternion(6.938894e-18, 1.3877788e-17, 1.0408341e-17, 1)
 
 [node name="BoneAttachment3D" type="BoneAttachment3D" parent="Skeleton3D" index="1"]
-transform = Transform3D(0.99387866, 0.01584068, -0.109334975, -0.032516114, 0.9877733, -0.1524676, 0.10558289, 0.15508947, 0.9822421, -0.57953906, 0.8955263, -0.021525584)
+transform = Transform3D(0.99999994, -1.4901161e-08, 5.9604645e-08, -4.4703484e-08, 0.9999999, 2.9802322e-08, -1.1920929e-07, 0, 0.9999999, -0.5586959, 0.91314524, 0.038566858)
 bone_name = "R_WeaponAttach_JNT"
 bone_idx = 12
 

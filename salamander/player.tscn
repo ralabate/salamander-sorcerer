@@ -28,3 +28,20 @@ mesh = SubResource("CapsuleMesh_sh265")
 
 [node name="SalamanderVisual" parent="." instance=ExtResource("2_onrkg")]
 unique_name_in_owner = true
+
+[node name="Skeleton3D" parent="SalamanderVisual" index="0"]
+bones/1/rotation = Quaternion(0, 0.019867672, 0, 0.99980265)
+bones/2/rotation = Quaternion(0, -0.01692299, 0, 0.9998568)
+bones/3/rotation = Quaternion(0, -0.01692299, 0, 0.9998568)
+bones/4/rotation = Quaternion(0, -0.01692299, 0, 0.9998568)
+bones/5/rotation = Quaternion(-0.29658514, 0.87132317, 0.058577586, 0.38652533)
+bones/6/rotation = Quaternion(-1.6543612e-24, 0.53120506, -6.617445e-24, 0.8472433)
+bones/7/rotation = Quaternion(-1.5509639e-25, -0.077815086, -1.0339759e-25, 0.9969679)
+bones/9/rotation = Quaternion(-0.058577586, -0.38652536, -0.29658514, 0.8713232)
+bones/10/rotation = Quaternion(2.4196806e-17, 0.53120506, 3.1000972e-16, 0.8472433)
+bones/11/rotation = Quaternion(2.0679518e-25, -0.077815086, -1.5509639e-25, 0.9969679)
+
+[node name="BoneAttachment3D" parent="SalamanderVisual/Skeleton3D" index="1"]
+transform = Transform3D(0.96437836, 0.008041918, -0.26440406, -0.105141506, 0.92884374, -0.35523853, 0.24273318, 0.37038428, 0.89660245, -0.6023179, 0.8815376, -0.11463957)
+
+[editable path="SalamanderVisual"]
