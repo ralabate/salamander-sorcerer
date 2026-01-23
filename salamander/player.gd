@@ -5,17 +5,19 @@ const IDLE_STATE = "mando_idle"
 const SWIPE_STATE = "mando_swipe"
 
 const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
 
 var _animation_tree: AnimationTree
 var _state_machine: AnimationNodeStateMachinePlayback
 
 @onready var visual: Visual = %SalamanderVisual
+@onready var sword_area: Area3D = %SwordArea
 
 
 func _ready() -> void:
 	_animation_tree = visual.get_node("AnimationTree") as AnimationTree
 	_state_machine = _animation_tree.get("parameters/playback")
+
+	sword_area.body_entered.connect(_on_body_entered_sword)
 
 
 func _physics_process(delta: float) -> void:
@@ -41,3 +43,9 @@ func _physics_process(delta: float) -> void:
 		_state_machine.travel(SWIPE_STATE)
 
 	move_and_slide()
+
+
+func _on_body_entered_sword(body: Node3D) -> void:
+	var rigid_body = body as RigidBody3D
+	if rigid_body and _state_machine.get_current_node() == SWIPE_STATE:
+		rigid_body.apply_impulse(visual.transform.basis.z * 10.0)

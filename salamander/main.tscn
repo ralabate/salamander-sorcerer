@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://d3l7dwjff10l3"]
+[gd_scene load_steps=8 format=3 uid="uid://d3l7dwjff10l3"]
 
 [ext_resource type="PackedScene" uid="uid://c7gckhdb1qr1l" path="res://player.tscn" id="1_ig7tw"]
 
@@ -11,11 +11,13 @@ ambient_light_source = 1
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1bvp3"]
 albedo_color = Color(0.5689727, 0.56897277, 0.5689727, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2yge"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_0xm2m"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ig7tw"]
 albedo_color = Color(0, 0, 0, 1)
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_ig7tw"]
-material = SubResource("StandardMaterial3D_h2yge")
+[sub_resource type="SphereMesh" id="SphereMesh_ig7tw"]
+material = SubResource("StandardMaterial3D_ig7tw")
 
 [node name="Main" type="Node3D"]
 
@@ -82,42 +84,74 @@ size = 23.857
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.25881904, 0, -0.25881904, 0.9659258, 0, 23, 37)
 
-[node name="Baddie" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1.5, 0)
-mesh = SubResource("CapsuleMesh_ig7tw")
-skeleton = NodePath("../CSGCombiner3D")
+[node name="Badguy" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 4.5)
 
-[node name="Baddie2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 1.5, -9)
-mesh = SubResource("CapsuleMesh_ig7tw")
-skeleton = NodePath("../CSGCombiner3D")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Badguy"]
+shape = SubResource("SphereShape3D_0xm2m")
 
-[node name="Baddie3" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.5, 8)
-mesh = SubResource("CapsuleMesh_ig7tw")
-skeleton = NodePath("../CSGCombiner3D")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Badguy"]
+mesh = SubResource("SphereMesh_ig7tw")
 
-[node name="Baddie4" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1.5, 9)
-mesh = SubResource("CapsuleMesh_ig7tw")
-skeleton = NodePath("../CSGCombiner3D")
+[node name="Badguy2" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 6, -3.5)
 
-[node name="Baddie5" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.5, -8)
-mesh = SubResource("CapsuleMesh_ig7tw")
-skeleton = NodePath("../CSGCombiner3D")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Badguy2"]
+shape = SubResource("SphereShape3D_0xm2m")
 
-[node name="Baddie6" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.5, -6)
-mesh = SubResource("CapsuleMesh_ig7tw")
-skeleton = NodePath("../CSGCombiner3D")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Badguy2"]
+mesh = SubResource("SphereMesh_ig7tw")
 
-[node name="Baddie7" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1.5, -2)
-mesh = SubResource("CapsuleMesh_ig7tw")
-skeleton = NodePath("../CSGCombiner3D")
+[node name="Badguy3" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 6, -2)
 
-[node name="Baddie8" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1.5, 5)
-mesh = SubResource("CapsuleMesh_ig7tw")
-skeleton = NodePath("../CSGCombiner3D")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Badguy3"]
+shape = SubResource("SphereShape3D_0xm2m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Badguy3"]
+mesh = SubResource("SphereMesh_ig7tw")
+
+[node name="Badguy4" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 6, -8)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Badguy4"]
+shape = SubResource("SphereShape3D_0xm2m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Badguy4"]
+mesh = SubResource("SphereMesh_ig7tw")
+
+[node name="Badguy5" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 6, -8.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Badguy5"]
+shape = SubResource("SphereShape3D_0xm2m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Badguy5"]
+mesh = SubResource("SphereMesh_ig7tw")
+
+[node name="Badguy6" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 6, -4.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Badguy6"]
+shape = SubResource("SphereShape3D_0xm2m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Badguy6"]
+mesh = SubResource("SphereMesh_ig7tw")
+
+[node name="Badguy7" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 6, 6)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Badguy7"]
+shape = SubResource("SphereShape3D_0xm2m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Badguy7"]
+mesh = SubResource("SphereMesh_ig7tw")
+
+[node name="Badguy8" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 6, 8)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Badguy8"]
+shape = SubResource("SphereShape3D_0xm2m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Badguy8"]
+mesh = SubResource("SphereMesh_ig7tw")
