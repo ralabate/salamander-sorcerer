@@ -30,18 +30,23 @@ mesh = SubResource("CapsuleMesh_sh265")
 unique_name_in_owner = true
 
 [node name="Skeleton3D" parent="SalamanderVisual" index="0"]
-bones/1/rotation = Quaternion(0, 0.019867672, 0, 0.99980265)
-bones/2/rotation = Quaternion(0, -0.01692299, 0, 0.9998568)
-bones/3/rotation = Quaternion(0, -0.01692299, 0, 0.9998568)
-bones/4/rotation = Quaternion(0, -0.01692299, 0, 0.9998568)
-bones/5/rotation = Quaternion(-0.29658514, 0.87132317, 0.058577586, 0.38652533)
-bones/6/rotation = Quaternion(-1.6543612e-24, 0.53120506, -6.617445e-24, 0.8472433)
-bones/7/rotation = Quaternion(-1.5509639e-25, -0.077815086, -1.0339759e-25, 0.9969679)
-bones/9/rotation = Quaternion(-0.058577586, -0.38652536, -0.29658514, 0.8713232)
-bones/10/rotation = Quaternion(2.4196806e-17, 0.53120506, 3.1000972e-16, 0.8472433)
-bones/11/rotation = Quaternion(2.0679518e-25, -0.077815086, -1.5509639e-25, 0.9969679)
+bones/0/position = Vector3(0, 0.79210144, 0)
+bones/1/rotation = Quaternion(0, 0.010016027, 0, 0.9999498)
+bones/2/rotation = Quaternion(0, -0.00853139, 0, 0.9999637)
+bones/3/rotation = Quaternion(0, -0.00853139, 0, 0.9999637)
+bones/4/rotation = Quaternion(0, -0.00853139, 0, 0.9999637)
+bones/5/rotation = Quaternion(-0.29862598, 0.88559973, 0.04708067, 0.35258913)
+bones/6/rotation = Quaternion(-3.3087225e-24, 0.56352687, -1.9852335e-23, 0.8260978)
+bones/7/rotation = Quaternion(2.5849394e-25, -0.03925713, -1.0339758e-25, 0.99922913)
+bones/9/rotation = Quaternion(-0.04708067, -0.35258916, -0.298626, 0.8855998)
+bones/10/rotation = Quaternion(1.2207097e-17, 0.56352687, 3.107129e-16, 0.8260978)
+bones/11/rotation = Quaternion(-3.877409e-25, -0.03925713, 2.5849394e-25, 0.99922913)
+bones/13/rotation = Quaternion(-0.14057602, 0.9738944, 0.07726104, -0.16061997)
+bones/14/rotation = Quaternion(-0.017123278, -0.22619644, 0.003976931, 0.9739231)
+bones/16/rotation = Quaternion(-0.07726103, 0.16061997, -0.14057602, 0.9738944)
+bones/17/rotation = Quaternion(-0.017123278, -0.22619644, 0.003976931, 0.9739231)
 
 [node name="BoneAttachment3D" parent="SalamanderVisual/Skeleton3D" index="1"]
-transform = Transform3D(0.96437836, 0.008041918, -0.26440406, -0.105141506, 0.92884374, -0.35523853, 0.24273318, 0.37038428, 0.89660245, -0.6023179, 0.8815376, -0.11463957)
+transform = Transform3D(0.99082345, 0.017000169, -0.13408858, -0.042000614, 0.9816712, -0.18589665, 0.12847066, 0.18982261, 0.97337705, -0.58370763, 0.8845203, -0.035700284)
 
 [editable path="SalamanderVisual"]

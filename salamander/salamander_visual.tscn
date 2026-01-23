@@ -1,18 +1,24 @@
-[gd_scene load_steps=12 format=3 uid="uid://683iuish3sen"]
+[gd_scene load_steps=17 format=3 uid="uid://683iuish3sen"]
 
 [ext_resource type="PackedScene" uid="uid://c1pgm8qtpsko2" path="res://models/mando.fbx" id="1_rwspt"]
 [ext_resource type="Animation" uid="uid://dt7oepwjr3rvd" path="res://animations/mando_idle.res" id="2_fj2ko"]
 [ext_resource type="PackedScene" uid="uid://qp5q4e11b74c" path="res://models/sword.fbx" id="2_vqn31"]
+[ext_resource type="Script" uid="uid://cdntwhlvhy4xh" path="res://visual.gd" id="2_xv1ao"]
 [ext_resource type="Animation" uid="uid://evftl2wychy7" path="res://animations/mando_swipe.res" id="3_vqn31"]
+[ext_resource type="Animation" uid="uid://b4ud6bgm08m6" path="res://animations/mando_walk.res" id="6_n0fsh"]
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xv1ao"]
 _data = {
 &"mando_idle": ExtResource("2_fj2ko"),
-&"mando_swipe": ExtResource("3_vqn31")
+&"mando_swipe": ExtResource("3_vqn31"),
+&"mando_walk": ExtResource("6_n0fsh")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vqn31"]
 animation = &"mando/mando_idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8u4em"]
+animation = &"mando/mando_walk"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xv1ao"]
 animation = &"mando/mando_swipe"
@@ -26,27 +32,55 @@ advance_mode = 2
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vqn31"]
 advance_mode = 2
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gblxj"]
+advance_mode = 2
+advance_expression = "is_moving == true"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xjpdu"]
+advance_mode = 2
+advance_expression = "is_moving == false"
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_gblxj"]
 states/mando_idle/node = SubResource("AnimationNodeAnimation_vqn31")
 states/mando_idle/position = Vector2(365, 97)
+states/mando_mando_walk/node = SubResource("AnimationNodeAnimation_8u4em")
+states/mando_mando_walk/position = Vector2(613, 41)
 states/mando_swipe/node = SubResource("AnimationNodeAnimation_xv1ao")
 states/mando_swipe/position = Vector2(640, 191)
-transitions = ["mando_idle", "mando_swipe", SubResource("AnimationNodeStateMachineTransition_n0fsh"), "mando_swipe", "mando_idle", SubResource("AnimationNodeStateMachineTransition_8u4em"), "Start", "mando_idle", SubResource("AnimationNodeStateMachineTransition_vqn31")]
+transitions = ["mando_idle", "mando_swipe", SubResource("AnimationNodeStateMachineTransition_n0fsh"), "mando_swipe", "mando_idle", SubResource("AnimationNodeStateMachineTransition_8u4em"), "Start", "mando_idle", SubResource("AnimationNodeStateMachineTransition_vqn31"), "mando_idle", "mando_mando_walk", SubResource("AnimationNodeStateMachineTransition_gblxj"), "mando_mando_walk", "mando_idle", SubResource("AnimationNodeStateMachineTransition_xjpdu")]
 
 [node name="SalamanderVisual" instance=ExtResource("1_rwspt")]
+script = ExtResource("2_xv1ao")
 
 [node name="Skeleton3D" parent="." index="0"]
+bones/0/position = Vector3(0, 0.67886716, 0)
+bones/1/position = Vector3(0.3, 8.498308e-17, 0)
 bones/1/rotation = Quaternion(0, 0, -2.4651903e-32, 1)
+bones/2/position = Vector3(0.3, 8.498308e-17, 0)
 bones/2/rotation = Quaternion(0, 0, -2.4651903e-32, 1)
+bones/3/position = Vector3(0.1, 2.8327693e-17, 0)
 bones/3/rotation = Quaternion(0, 0, -2.4651903e-32, 1)
+bones/4/position = Vector3(0.2, 5.665539e-17, 0)
 bones/4/rotation = Quaternion(0, 0, -2.4651903e-32, 1)
+bones/6/position = Vector3(0.22938082, 2.220446e-16, -1.110223e-16)
 bones/6/rotation = Quaternion(3.8869075e-17, 0.5955227, -2.3753324e-16, 0.80333847)
+bones/7/position = Vector3(0.29516453, 2.220446e-16, 1.9428903e-16)
 bones/7/rotation = Quaternion(-1.3877788e-17, 0, -6.938894e-18, 1)
+bones/8/rotation = Quaternion(0.82968277, -0.45883048, 0.30445, -0.0917137)
 bones/10/rotation = Quaternion(-4.318787e-18, 0.5955227, -3.4550292e-17, 0.80333847)
 bones/11/rotation = Quaternion(6.938894e-18, 1.3877788e-17, 1.0408341e-17, 1)
+bones/13/rotation = Quaternion(-0.2917147, 0.83640355, -0.03299159, -0.46286422)
+bones/14/position = Vector3(0.33829814, -1.6653345e-16, 5.551115e-17)
+bones/14/rotation = Quaternion(-0.009502611, -0.84117234, 0.01478929, 0.5404813)
+bones/15/position = Vector3(0.41029656, -1.6653345e-16, -1.3877788e-16)
+bones/15/rotation = Quaternion(6.938894e-18, 0, 5.2041704e-18, 1)
+bones/16/position = Vector3(-0.07182848, 0.187589, 3.3269883e-17)
+bones/16/rotation = Quaternion(-0.03812808, 0.3795039, -0.17932518, 0.9068438)
+bones/17/rotation = Quaternion(-0.014659178, -0.5518522, 0.009701221, 0.8337566)
+bones/18/rotation = Quaternion(-6.938894e-18, -6.938894e-18, -6.938894e-18, 1)
 
 [node name="BoneAttachment3D" type="BoneAttachment3D" parent="Skeleton3D" index="1"]
-transform = Transform3D(0.99999994, -1.4901161e-08, 5.9604645e-08, -4.4703484e-08, 0.9999999, 2.9802322e-08, -1.1920929e-07, 0, 0.9999999, -0.5586959, 0.91314524, 0.038566858)
+transform = Transform3D(0.99999994, -1.4901161e-08, 5.9604645e-08, -4.4703484e-08, 0.9999999, 2.9802322e-08, -1.1920929e-07, 0, 0.9999999, -0.5586959, 0.7920124, 0.038566858)
 bone_name = "R_WeaponAttach_JNT"
 bone_idx = 12
 
@@ -59,4 +93,5 @@ libraries = {
 
 [node name="AnimationTree" type="AnimationTree" parent="." index="2"]
 tree_root = SubResource("AnimationNodeStateMachine_gblxj")
+advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")

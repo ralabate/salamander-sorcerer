@@ -10,7 +10,7 @@ const JUMP_VELOCITY = 4.5
 var _animation_tree: AnimationTree
 var _state_machine: AnimationNodeStateMachinePlayback
 
-@onready var visual: Node3D = %SalamanderVisual
+@onready var visual: Visual = %SalamanderVisual
 
 
 func _ready() -> void:
@@ -27,10 +27,13 @@ func _physics_process(delta: float) -> void:
 	if direction and _state_machine.get_current_node() != SWIPE_STATE:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
+		visual.is_moving = true
 	else:
 		velocity.x = 0
 		velocity.z = 0
-
+		visual.is_moving = false
+	
+	visual.is_moving = direction != Vector3.ZERO
 	if direction != Vector3.ZERO:
 		visual.look_at(visual.global_position + direction, Vector3.UP, true)
 
