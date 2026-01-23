@@ -43,3 +43,28 @@ UV Assignation: https://www.youtube.com/watch?v=6TJr0G71U14
 
 Publish to Godot: https://www.youtube.com/watch?v=XbE6kBlntSU
 
+# IK Leg Rigging Microtutorial
+
+- [ ] Place JNTs (hip, knee, ankle)
+- [ ] Orient JNTs
+- [ ] Create IK Handle (Click IK Handle shelf tool, then, in outliner,  click hip JNT, then command-click ankle JNT
+- [ ] ------------------
+- [ ] Create NURBS Circle
+- [ ] Scale up NURBS Circle, lock off scale attributes
+- [ ] Group NURBS Circle
+- [ ] Click newly created group, command-lick ankle JNT, match transforms
+- [ ] Adjust group translation and rotation as needed
+- [ ] Parent IK handle underneath NURBS Circle
+- [ ] -------------------
+- [ ] Create NURBS Cone
+- [ ] Scale up NURBS Cone, lock off scale attributes
+- [ ] Group NURBS Cone
+- [ ] Click newly created group, command-click knee JNT, match transforms
+- [ ] Adjust group translation and rotation as needed
+- [ ] Click NURBS Cone, command-click IK handle, create pole vector constraint
+- [ ] --------------------
+- [ ] Click NURBS Circle, command-click ankle JNT create orient constraint
+- [ ] --------------------
+- [ ] Select entire JNT hierarchy, command-click mesh, bind skin
+- [ ] Paint weights
+
