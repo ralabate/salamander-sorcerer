@@ -8,17 +8,17 @@ Constraints: Single-sceen, B&W, top-down fixed-camera... one-hit non-bipedal mon
 # TODO
 - [x] Salamander Model Sheet
 - [x] Salamander Model
-- [ ] Salamander Rig
-- [ ] Salamander Swipe Attack anim
+- [x] Salamander Rig
+- [x] Salamander Swipe Attack anim
 - [ ] Salamander Swipe Attack hitbox anim
 - [ ] Salamander Swipe Attack hurtbox anim
 - [ ] Salamander Spin Attack anim
 - [ ] Salamander Spin Attack hitbox anim
 - [ ] Salamander Spin Attack hurtbox anim
 - [ ] Salamander Attack FX
-- [ ] Character controller
+- [x] Character controller
 - [x] Level camera placement
-- [ ] Level greybox mesh
+- [x] Level greybox mesh
 - [ ] Level env mesh
 - [ ] Level env FX
 - [ ] Level skybox
