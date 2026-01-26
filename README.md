@@ -48,7 +48,7 @@ Publish to Godot: https://www.youtube.com/watch?v=XbE6kBlntSU
 - [ ] Indiviudal animations get their own file CHARACTERNAME_animation_ANIMATIONNAME_vXX.mb
 - [ ] Maya referencing is used to pull in the rigged model to the individual animation files (use option "merge into namespace")
 - [ ] Individual animations are imported into Godot as CHARACTERNAME_animation_ANIMAITONNAME_vXX.res
-- [ ] Model and animation .mbfiles are kept in /dcc/maya subdiretory of Godot project
+- [ ] Model and animation .mb files are kept in /dcc/maya subdiretory of Godot project
 - [ ] Model .fbx files are kept in /models subdirectory of Godot project
 - [ ] Animation .fbx files are kept in /animations subdirectory of Godot project
 - [ ] Animation .res files are kept in /animations subdirectory of Godot project
