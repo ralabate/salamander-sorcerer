@@ -43,7 +43,7 @@ UV Assignation: https://www.youtube.com/watch?v=6TJr0G71U14
 
 Publish to Godot: https://www.youtube.com/watch?v=XbE6kBlntSU
 
-# Aniation Pipeline Conventions
+# File Naming
 - [ ] Rigged model is inside CHARACTERNAME_model_vXX.mb
 - [ ] Indiviudal animations get their own file CHARACTERNAME_animation_ANIMATIONNAME_vXX.mb
 - [ ] Maya referencing is used to pull in the rigged model to the individual animation files
