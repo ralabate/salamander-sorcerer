@@ -73,4 +73,9 @@ Publish to Godot: https://www.youtube.com/watch?v=XbE6kBlntSU
 - [ ] --------------------
 - [ ] Select entire JNT hierarchy, command-click mesh, bind skin
 - [ ] Paint weights
+- [ ] 
+
+# Frame Data Ref
+
+https://critpoints.net/2023/02/20/frame-data-patterns-that-game-designers-should-know/
 
