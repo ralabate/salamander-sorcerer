@@ -37,31 +37,32 @@ size = Vector3(5, 1.5, 1)
 material = SubResource("StandardMaterial3D_0xm2m")
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.165064, 1.25, -7.1160254)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.665064, 1.25, -5.6160254)
 size = Vector3(5, 1.5, 1)
 material = SubResource("StandardMaterial3D_0xm2m")
 
 [node name="CSGBox3D9" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.834936, 1, 12.383974)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.834936, 1, -8.616026)
 size = Vector3(5, 1, 1)
 material = SubResource("StandardMaterial3D_0xm2m")
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.165064, 1, 1.3839746)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.165064, 1, 3.3839746)
 size = Vector3(5, 1, 1)
 material = SubResource("StandardMaterial3D_0xm2m")
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.915064, 1, 6.8839746)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5849361, 1, -10.116026)
 size = Vector3(2.5, 1, 3)
 material = SubResource("StandardMaterial3D_0xm2m")
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.165064, 1, 11.383974)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.334936, 1, 3.883974)
 size = Vector3(5, 1, 1)
 material = SubResource("StandardMaterial3D_0xm2m")
 
 [node name="CircularFloor" type="CSGCylinder3D" parent="CSGCombiner3D"]
+visible = false
 radius = 18.0
 height = 1.0
 sides = 17
@@ -76,10 +77,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 operation = 2
 size = Vector3(3, 4.5, 3)
 
+[node name="Floor" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 0, -3)
+size = Vector3(20, 1, 20)
+
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 26.5, 32)
+transform = Transform3D(0.7071068, 0.5, -0.5, 0, 0.70710677, 0.70710677, 0.7071068, -0.5, 0.5, -8.375, 13.72, 6.505)
+projection = 1
 fov = 35.0
-size = 23.857
+size = 20.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.25881904, 0, -0.25881904, 0.9659258, 0, 23, 37)
@@ -145,13 +151,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 6, 6)
 shape = SubResource("SphereShape3D_0xm2m")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Badguy7"]
-mesh = SubResource("SphereMesh_ig7tw")
-
-[node name="Badguy8" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 6, 8)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Badguy8"]
-shape = SubResource("SphereShape3D_0xm2m")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Badguy8"]
 mesh = SubResource("SphereMesh_ig7tw")
