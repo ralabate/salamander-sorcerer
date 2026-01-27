@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://d3l7dwjff10l3"]
+[gd_scene load_steps=9 format=3 uid="uid://d3l7dwjff10l3"]
 
 [ext_resource type="PackedScene" uid="uid://c7gckhdb1qr1l" path="res://player.tscn" id="1_ig7tw"]
 
@@ -10,6 +10,9 @@ ambient_light_source = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1bvp3"]
 albedo_color = Color(0.5689727, 0.56897277, 0.5689727, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2yge"]
+albedo_color = Color(0.25882354, 1, 1, 1)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_0xm2m"]
 
@@ -80,6 +83,7 @@ size = Vector3(3, 4.5, 3)
 [node name="Floor" type="CSGBox3D" parent="CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 0, -3)
 size = Vector3(20, 1, 20)
+material = SubResource("StandardMaterial3D_h2yge")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.7071068, 0.5, -0.5, 0, 0.70710677, 0.70710677, 0.7071068, -0.5, 0.5, -8.375, 13.72, 6.505)

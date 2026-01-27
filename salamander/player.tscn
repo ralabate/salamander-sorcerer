@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://c7gckhdb1qr1l"]
+[gd_scene load_steps=4 format=3 uid="uid://c7gckhdb1qr1l"]
 
 [ext_resource type="Script" uid="uid://rn1hwj7pvso1" path="res://player.gd" id="1_4flbx"]
 [ext_resource type="PackedScene" uid="uid://683iuish3sen" path="res://salamander_visual.tscn" id="2_onrkg"]
@@ -6,9 +6,6 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sh265"]
 radius = 0.25
 height = 1.0
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
-height = 1.1
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_4flbx")
@@ -21,30 +18,30 @@ shape = SubResource("CapsuleShape3D_sh265")
 unique_name_in_owner = true
 
 [node name="Skeleton3D" parent="SalamanderVisual" index="0"]
-bones/0/position = Vector3(0, 0.79210144, 0)
-bones/1/rotation = Quaternion(0, 0.0007552259, 0, 0.99999976)
-bones/2/rotation = Quaternion(0, -0.00064327876, 0, 0.9999999)
-bones/3/rotation = Quaternion(0, -0.00064327876, 0, 0.9999999)
-bones/4/rotation = Quaternion(0, -0.00064327876, 0, 0.9999999)
-bones/5/rotation = Quaternion(-0.3001382, 0.8978146, 0.03620996, 0.32021084)
-bones/6/rotation = Quaternion(5.6868667e-25, 0.5931416, 0, 0.8050982)
+bones/0/rotation = Quaternion(0.012057588, 0, 0, 0.9999273)
+bones/1/position = Vector3(0, 0.29991278, 0.007234026)
+bones/1/rotation = Quaternion(0.012057588, 0, 0, 0.9999273)
+bones/2/position = Vector3(0, 0.3, -1.0408341e-17)
+bones/2/rotation = Quaternion(0, 0, 0, 1)
+bones/3/rotation = Quaternion(-0.012057588, 0, 0, 0.9999273)
+bones/4/rotation = Quaternion(0.6963339, -0.011543783, 0.58734566, -0.41232395)
+bones/5/rotation = Quaternion(-0.0019290918, 0.002755161, -0.57355475, 0.8191603)
+bones/6/rotation = Quaternion(-0.34097698, -0.020805072, -0.015805949, 0.9397085)
 bones/7/rotation = Quaternion(2.633407e-25, -0.0029607632, -1.130911e-25, 0.99999565)
-bones/9/rotation = Quaternion(-0.036209967, -0.32021084, -0.3001382, 0.8978146)
-bones/10/rotation = Quaternion(9.206423e-19, 0.5931416, 3.1095122e-16, 0.8050982)
-bones/11/rotation = Quaternion(-3.9420326e-25, -0.0029607632, 2.633407e-25, 0.99999565)
-bones/13/rotation = Quaternion(-0.14057602, 0.9738944, 0.07726104, -0.16061997)
-bones/14/rotation = Quaternion(-0.017123278, -0.22619644, 0.003976931, 0.9739231)
-bones/16/rotation = Quaternion(-0.07726103, 0.16061997, -0.14057602, 0.9738944)
-bones/17/rotation = Quaternion(-0.017123278, -0.22619644, 0.003976931, 0.9739231)
+bones/8/rotation = Quaternion(0.9999273, 0, 0, 0.012057586)
+bones/9/rotation = Quaternion(0.6963339, -0.011543783, 0.58734566, -0.41232395)
+bones/10/rotation = Quaternion(-0.0019290918, 0.002755161, -0.57355475, 0.8191603)
+bones/11/rotation = Quaternion(-0.34097698, -0.020805072, -0.015805949, 0.9397085)
+bones/13/rotation = Quaternion(0.39384183, 0.58727217, 0.39384183, 0.58727217)
+bones/14/rotation = Quaternion(-1.2325952e-32, 3.081488e-33, 0, 1)
+bones/15/rotation = Quaternion(-0.019072467, 0.50849295, -0.28298396, 0.8130137)
+bones/16/rotation = Quaternion(-1.406916e-16, 4.328973e-17, 0.2739715, 0.9617378)
+bones/17/rotation = Quaternion(0.11006348, 0.41247562, 1.20043715e-05, 0.90429527)
+bones/18/rotation = Quaternion(0.8130147, 0.2829841, 0.5084913, 0.01907229)
+bones/19/rotation = Quaternion(-7.828224e-16, -4.3289703e-17, 0.27397102, 0.96173793)
+bones/20/rotation = Quaternion(0.055768892, 0.20900428, 1.3418625e-05, 0.9763232)
 
 [node name="BoneAttachment3D" parent="SalamanderVisual/Skeleton3D" index="1"]
-transform = Transform3D(0.99994755, 0.0021869242, -0.010001689, -0.0023296475, 0.9998953, -0.014281303, 0.009969354, 0.014303863, 0.9998479, -0.5607732, 0.9033659, 0.033221275)
-
-[node name="SwordArea" type="Area3D" parent="SalamanderVisual/Skeleton3D/BoneAttachment3D/sword" index="1"]
-unique_name_in_owner = true
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SalamanderVisual/Skeleton3D/BoneAttachment3D/sword/SwordArea"]
-transform = Transform3D(1, 0, 0, 0, 0, -0.99999994, -2.9802322e-08, 1, 2.9802322e-08, 0.10621649, 0.0018898249, 0.39014924)
-shape = SubResource("CapsuleShape3D_onrkg")
+transform = Transform3D(-0.3296634, -0.26096138, 0.90731525, -0.63780344, 0.7701315, -0.010234479, -0.6960813, -0.5820629, -0.42032638, -0.55406904, 0.90050435, 0.0374826)
 
 [editable path="SalamanderVisual"]

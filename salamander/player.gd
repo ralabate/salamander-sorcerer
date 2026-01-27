@@ -10,14 +10,15 @@ var _animation_tree: AnimationTree
 var _state_machine: AnimationNodeStateMachinePlayback
 
 @onready var visual: Visual = %SalamanderVisual
-@onready var sword_area: Area3D = %SwordArea
 
 
 func _ready() -> void:
 	_animation_tree = visual.get_node("AnimationTree") as AnimationTree
 	_state_machine = _animation_tree.get("parameters/playback")
 
-	sword_area.body_entered.connect(_on_body_entered_sword)
+	visual.sword_area.body_entered.connect(_on_body_entered_sword)
+	
+	_state_machine.travel(IDLE_STATE)
 
 
 func _physics_process(delta: float) -> void:
