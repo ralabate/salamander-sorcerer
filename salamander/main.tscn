@@ -1,9 +1,13 @@
-[gd_scene load_steps=18 format=4 uid="uid://d3l7dwjff10l3"]
+[gd_scene load_steps=22 format=4 uid="uid://d3l7dwjff10l3"]
 
 [ext_resource type="PackedScene" uid="uid://c7gckhdb1qr1l" path="res://player.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://d0qikokffh1n1" path="res://models/well_model.fbx" id="2_h2yge"]
 [ext_resource type="Material" uid="uid://ctyhh3hrnum5d" path="res://materials/well_material.tres" id="3_1bvp3"]
 [ext_resource type="Material" uid="uid://c2bunrdh035ly" path="res://materials/wall_material.tres" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://d3jk8x4r01863" path="res://models/arch_model.fbx" id="5_7mycd"]
+[ext_resource type="Material" uid="uid://cr16i8aam1tyq" path="res://materials/arch_material.tres" id="6_272bh"]
+[ext_resource type="PackedScene" uid="uid://bxuch0fry4lh0" path="res://models/floor_model.fbx" id="7_272bh"]
+[ext_resource type="Material" uid="uid://ljpab7dn7d0o" path="res://materials/floor_material.tres" id="8_5vw27"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_ig7tw"]
 
@@ -91,6 +95,7 @@ metadata/_edit_lock_ = true
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.834936, 1.25, 1.3839746)
+visible = false
 size = Vector3(5, 1.5, 1)
 material = SubResource("StandardMaterial3D_0xm2m")
 
@@ -102,26 +107,29 @@ material = SubResource("StandardMaterial3D_0xm2m")
 
 [node name="CSGBox3D9" type="CSGBox3D" parent="CSGCombiner3D"]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.834936, 1, -8.616026)
+visible = false
 size = Vector3(5, 1, 1)
 material = SubResource("StandardMaterial3D_0xm2m")
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.165064, 1, 3.3839746)
+visible = false
 size = Vector3(5, 1, 1)
 material = SubResource("StandardMaterial3D_0xm2m")
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5849361, 1, -10.116026)
+visible = false
 size = Vector3(2.5, 1, 3)
 material = SubResource("StandardMaterial3D_0xm2m")
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.334936, 1, 3.883974)
+visible = false
 size = Vector3(5, 1, 1)
 material = SubResource("StandardMaterial3D_0xm2m")
 
 [node name="CircularFloor" type="CSGCylinder3D" parent="CSGCombiner3D"]
-visible = false
 radius = 18.0
 height = 1.0
 sides = 17
@@ -129,6 +137,7 @@ material = SubResource("StandardMaterial3D_1bvp3")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+visible = false
 size = Vector3(4, 5, 1)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D/CSGBox3D"]
@@ -138,6 +147,7 @@ size = Vector3(3, 4.5, 3)
 
 [node name="Floor" type="CSGBox3D" parent="CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 0, -3)
+visible = false
 size = Vector3(20, 1, 20)
 material = SubResource("StandardMaterial3D_h2yge")
 
@@ -246,11 +256,57 @@ scale_amount_max = 0.1
 hue_variation_max = 1.0
 
 [node name="wall_model" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -7)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.543875, -7)
 
 [node name="wall" type="MeshInstance3D" parent="wall_model"]
 material_override = ExtResource("4_1bvp3")
 mesh = SubResource("ArrayMesh_h41ad")
 skeleton = NodePath("")
 
+[node name="wall_model2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3040333, 0.543875, 3.661643)
+
+[node name="wall" type="MeshInstance3D" parent="wall_model2"]
+material_override = ExtResource("4_1bvp3")
+mesh = SubResource("ArrayMesh_h41ad")
+skeleton = NodePath("")
+
+[node name="wall_model3" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.82257, 0.543875, 1.3313398)
+
+[node name="wall" type="MeshInstance3D" parent="wall_model3"]
+material_override = ExtResource("4_1bvp3")
+mesh = SubResource("ArrayMesh_h41ad")
+skeleton = NodePath("")
+
+[node name="wall_model4" type="Node3D" parent="."]
+transform = Transform3D(-0.19900881, 0, 0.9799977, 0, 1, 0, -0.9799977, 0, -0.19900881, 9.158172, 0.543875, -8.994391)
+
+[node name="wall" type="MeshInstance3D" parent="wall_model4"]
+material_override = ExtResource("4_1bvp3")
+mesh = SubResource("ArrayMesh_h41ad")
+skeleton = NodePath("")
+
+[node name="wall_model5" type="Node3D" parent="."]
+transform = Transform3D(-0.19900881, 0, 0.9799977, 0, 1, 0, -0.9799977, 0, -0.19900881, 2.9677782, 0.543875, -10.829153)
+
+[node name="wall" type="MeshInstance3D" parent="wall_model5"]
+material_override = ExtResource("4_1bvp3")
+mesh = SubResource("ArrayMesh_h41ad")
+skeleton = NodePath("")
+
+[node name="arch_model" parent="." instance=ExtResource("5_7mycd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.59516, 0.5, -0.12791085)
+
+[node name="arch" parent="arch_model" index="0"]
+surface_material_override/0 = ExtResource("6_272bh")
+
+[node name="floor_model" parent="." instance=ExtResource("7_272bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.535, 0)
+
+[node name="floor" parent="floor_model" index="0"]
+surface_material_override/0 = ExtResource("8_5vw27")
+
 [editable path="well_model"]
+[editable path="arch_model"]
+[editable path="floor_model"]
