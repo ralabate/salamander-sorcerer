@@ -1,10 +1,22 @@
-[gd_scene load_steps=9 format=3 uid="uid://d3l7dwjff10l3"]
+[gd_scene load_steps=11 format=3 uid="uid://d3l7dwjff10l3"]
 
 [ext_resource type="PackedScene" uid="uid://c7gckhdb1qr1l" path="res://player.tscn" id="1_ig7tw"]
 
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_ig7tw"]
+
+[sub_resource type="Sky" id="Sky_0xm2m"]
+sky_material = SubResource("PhysicalSkyMaterial_ig7tw")
+
 [sub_resource type="Environment" id="Environment_ig7tw"]
-background_mode = 1
-ambient_light_source = 1
+background_mode = 2
+background_energy_multiplier = 3.11
+sky = SubResource("Sky_0xm2m")
+ambient_light_source = 3
+reflected_light_source = 2
+ssr_enabled = true
+ssao_enabled = true
+ssao_intensity = 16.0
+glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
 
@@ -92,7 +104,12 @@ fov = 35.0
 size = 20.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.25881904, 0, -0.25881904, 0.9659258, 0, 23, 37)
+transform = Transform3D(1, 0, 0, 0, 0.54463893, 0.83867055, 0, -0.83867055, 0.54463893, 0, 50, 37)
+light_energy = 0.333
+light_angular_distance = 5.0
+light_specular = 16.0
+shadow_enabled = true
+directional_shadow_mode = 0
 
 [node name="Badguy" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 4.5)
