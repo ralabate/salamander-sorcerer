@@ -39,7 +39,7 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "animations": {
-"idle_v01": {
+"idle_v02": {
 "save_to_file/enabled": true,
 "save_to_file/fallback_path": "res://animations/mando_animation_idle_v01.res",
 "save_to_file/keep_custom_tracks": "",

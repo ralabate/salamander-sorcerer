@@ -42,11 +42,11 @@ _data = {
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vqn31"]
 animation = &"mando/mando_idle"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8u4em"]
-animation = &"mando/mando_walk"
-
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xv1ao"]
 animation = &"mando/mando_swipe"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8u4em"]
+animation = &"mando/mando_walk"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_n0fsh"]
 
@@ -65,11 +65,12 @@ advance_expression = "is_moving == false"
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_gblxj"]
 states/mando_idle/node = SubResource("AnimationNodeAnimation_vqn31")
 states/mando_idle/position = Vector2(365, 97)
-states/mando_mando_walk/node = SubResource("AnimationNodeAnimation_8u4em")
-states/mando_mando_walk/position = Vector2(613, 41)
 states/mando_swipe/node = SubResource("AnimationNodeAnimation_xv1ao")
 states/mando_swipe/position = Vector2(640, 191)
-transitions = ["mando_idle", "mando_swipe", SubResource("AnimationNodeStateMachineTransition_n0fsh"), "mando_swipe", "mando_idle", SubResource("AnimationNodeStateMachineTransition_8u4em"), "mando_idle", "mando_mando_walk", SubResource("AnimationNodeStateMachineTransition_gblxj"), "mando_mando_walk", "mando_idle", SubResource("AnimationNodeStateMachineTransition_xjpdu")]
+states/mando_walk/node = SubResource("AnimationNodeAnimation_8u4em")
+states/mando_walk/position = Vector2(613, 41)
+transitions = ["mando_idle", "mando_swipe", SubResource("AnimationNodeStateMachineTransition_n0fsh"), "mando_swipe", "mando_idle", SubResource("AnimationNodeStateMachineTransition_8u4em"), "mando_idle", "mando_walk", SubResource("AnimationNodeStateMachineTransition_gblxj"), "mando_walk", "mando_idle", SubResource("AnimationNodeStateMachineTransition_xjpdu")]
+graph_offset = Vector2(183, -78)
 
 [node name="SalamanderVisual" instance=ExtResource("1_rwspt")]
 script = ExtResource("2_xv1ao")
@@ -104,7 +105,7 @@ bone_name = "R_WeaponAttach_JNT"
 bone_idx = 12
 
 [node name="sword" parent="Skeleton3D/BoneAttachment3D" index="0" instance=ExtResource("2_vqn31")]
-transform = Transform3D(-0.47155395, -0.10234985, -0.8758775, -0.21210942, 0.97724605, 0, 0.8559478, 0.18578185, -0.4825335, 0, 0, 0)
+transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0, 0.99999994, 0, 0, 0)
 
 [node name="sword" parent="Skeleton3D/BoneAttachment3D/sword" index="0"]
 surface_material_override/0 = ExtResource("4_8u4em")
