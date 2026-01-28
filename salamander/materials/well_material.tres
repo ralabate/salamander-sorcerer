@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://ctyhh3hrnum5d"]
+
+[ext_resource type="Texture2D" uid="uid://camcr7fagihaj" path="res://textures/well_model_openPBR_shader1_BaseColor.png" id="1_5jd2b"]
+[ext_resource type="Texture2D" uid="uid://n8eydosgd5bq" path="res://textures/well_model_openPBR_shader1_Normal.png" id="2_2w7m1"]
+[ext_resource type="Texture2D" uid="uid://dkhcl4wuxwtjd" path="res://textures/well_model_openPBR_shader1_Roughness.png" id="3_d1jjm"]
+
+[resource]
+albedo_texture = ExtResource("1_5jd2b")
+roughness_texture = ExtResource("3_d1jjm")
+normal_enabled = true
+normal_scale = 3.0
+normal_texture = ExtResource("2_2w7m1")

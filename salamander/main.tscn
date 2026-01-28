@@ -1,6 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://d3l7dwjff10l3"]
+[gd_scene load_steps=14 format=3 uid="uid://d3l7dwjff10l3"]
 
 [ext_resource type="PackedScene" uid="uid://c7gckhdb1qr1l" path="res://player.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://d0qikokffh1n1" path="res://models/well_model.fbx" id="2_h2yge"]
+[ext_resource type="Material" uid="uid://ctyhh3hrnum5d" path="res://materials/well_material.tres" id="3_1bvp3"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_ig7tw"]
 
@@ -33,6 +35,8 @@ albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="SphereMesh" id="SphereMesh_ig7tw"]
 material = SubResource("StandardMaterial3D_ig7tw")
+
+[sub_resource type="QuadMesh" id="QuadMesh_h2yge"]
 
 [node name="Main" type="Node3D"]
 
@@ -173,3 +177,32 @@ shape = SubResource("SphereShape3D_0xm2m")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Badguy7"]
 mesh = SubResource("SphereMesh_ig7tw")
+
+[node name="well_model" parent="." instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.167514, 0.49999905, -1.4102182)
+
+[node name="well" parent="well_model" index="0"]
+surface_material_override/0 = ExtResource("3_1bvp3")
+
+[node name="sparks" type="CPUParticles3D" parent="well_model/well" index="0"]
+transparency = 0.5
+cast_shadow = 0
+amount = 3000
+lifetime = 2.0
+lifetime_randomness = 1.0
+mesh = SubResource("QuadMesh_h2yge")
+emission_shape = 1
+emission_sphere_radius = 0.25
+particle_flag_rotate_y = true
+direction = Vector3(0, 1, 0)
+spread = 90.0
+gravity = Vector3(0, 0.1, 0)
+initial_velocity_min = 0.01
+initial_velocity_max = 0.25
+angular_velocity_max = 1.0
+angle_max = 180.0
+scale_amount_min = 0.01
+scale_amount_max = 0.1
+hue_variation_max = 1.0
+
+[editable path="well_model"]
