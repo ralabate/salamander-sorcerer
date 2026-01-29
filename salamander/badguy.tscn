@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://3ofau3e2i0v1"]
+
+[ext_resource type="Script" uid="uid://gl5mo83f81g6" path="res://badguy.gd" id="1_lf2yb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lf2yb"]
+albedo_color = Color(1, 0, 1, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_yljcb"]
+material = SubResource("StandardMaterial3D_lf2yb")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_yljcb"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lf2yb"]
+
+[node name="Badguy" type="CharacterBody3D"]
+script = ExtResource("1_lf2yb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_yljcb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_yljcb")
+
+[node name="HitArea" type="Area3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HitArea"]
+shape = SubResource("CapsuleShape3D_lf2yb")
+debug_color = Color(1, 0, 0, 0.41960785)

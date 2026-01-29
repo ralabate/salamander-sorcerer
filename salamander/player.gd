@@ -16,8 +16,6 @@ func _ready() -> void:
 	_animation_tree = visual.get_node("AnimationTree") as AnimationTree
 	_state_machine = _animation_tree.get("parameters/playback")
 
-	visual.sword_area.body_entered.connect(_on_body_entered_sword)
-	
 	_state_machine.travel(IDLE_STATE)
 
 
@@ -46,7 +44,6 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
-func _on_body_entered_sword(body: Node3D) -> void:
-	var rigid_body = body as RigidBody3D
-	if rigid_body and _state_machine.get_current_node() == SWIPE_STATE:
-		rigid_body.apply_impulse(visual.transform.basis.z * 10.0)
+func _on_body_entered_sword_area(body: Node3D) -> void:
+	if body and _state_machine.get_current_node() == SWIPE_STATE:
+		print("yo")
