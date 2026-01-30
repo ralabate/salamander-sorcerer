@@ -43,6 +43,14 @@ UV Assignation: https://www.youtube.com/watch?v=6TJr0G71U14
 
 Publish to Godot: https://www.youtube.com/watch?v=XbE6kBlntSU
 
+# Env Creation Tuts
+
+Box Modeling a brick well: https://www.youtube.com/watch?v=bjIxfVjsXuM
+
+Box Modeling a sword: https://www.youtube.com/watch?v=19Q1hDjdcyY
+
+Painting tiling patterns: https://www.youtube.com/watch?v=JMtw05Cj1gE
+
 # File Naming
 - [ ] Rigged model is inside CHARACTERNAME_model_vXX.mb
 - [ ] Indiviudal animations get their own file CHARACTERNAME_animation_ANIMATIONNAME_vXX.mb
