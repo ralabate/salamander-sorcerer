@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://d3l7dwjff10l3"]
+[gd_scene load_steps=17 format=3 uid="uid://d3l7dwjff10l3"]
 
 [ext_resource type="Script" uid="uid://ct0klyjd6wtmi" path="res://main.gd" id="1_4c57u"]
 [ext_resource type="PackedScene" uid="uid://c7gckhdb1qr1l" path="res://player.tscn" id="1_ig7tw"]
@@ -8,8 +8,9 @@
 [ext_resource type="Material" uid="uid://cr16i8aam1tyq" path="res://materials/arch_material.tres" id="6_272bh"]
 [ext_resource type="PackedScene" uid="uid://bxuch0fry4lh0" path="res://models/floor_model.fbx" id="7_272bh"]
 [ext_resource type="Material" uid="uid://ljpab7dn7d0o" path="res://materials/floor_material.tres" id="8_5vw27"]
-[ext_resource type="PackedScene" uid="uid://hkuma8pf7fot" path="res://wall_model.tscn" id="9_efxa6"]
+[ext_resource type="PackedScene" path="res://wall_model.tscn" id="9_efxa6"]
 [ext_resource type="PackedScene" uid="uid://3ofau3e2i0v1" path="res://badguy.tscn" id="9_kek77"]
+[ext_resource type="Texture2D" uid="uid://dcgiua51crecu" path="res://textures/skybox.png" id="10_efxa6"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_ig7tw"]
 
@@ -112,6 +113,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
 transform = Transform3D(1, 0, 0, 0, 0.7071068, 0.7071068, 0, -0.7071068, 0.7071068, 0, 26, 31)
 fov = 35.0
 size = 20.0
+
+[node name="Sprite3D" type="Sprite3D" parent="Camera3D"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, -60)
+texture = ExtResource("10_efxa6")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.54463893, 0.83867055, 0, -0.83867055, 0.54463893, 0, 50, 37)
