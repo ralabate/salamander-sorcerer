@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://d3l7dwjff10l3"]
+[gd_scene load_steps=21 format=3 uid="uid://d3l7dwjff10l3"]
 
 [ext_resource type="Script" uid="uid://ct0klyjd6wtmi" path="res://main.gd" id="1_4c57u"]
 [ext_resource type="PackedScene" uid="uid://c7gckhdb1qr1l" path="res://player.tscn" id="1_ig7tw"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" path="res://wall_model.tscn" id="9_efxa6"]
 [ext_resource type="PackedScene" uid="uid://3ofau3e2i0v1" path="res://badguy.tscn" id="9_kek77"]
 [ext_resource type="Texture2D" uid="uid://dcgiua51crecu" path="res://textures/skybox.png" id="10_efxa6"]
+[ext_resource type="Texture2D" uid="uid://ba6x4w4ewxom8" path="res://textures/cloud.png" id="12_dg77c"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_ig7tw"]
 
@@ -33,6 +34,24 @@ vertices = PackedVector3Array(8.749994, 0.46669936, -7.2500076, 9.249994, 0.4666
 polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(4, 3, 2), PackedInt32Array(6, 5, 7), PackedInt32Array(7, 5, 8), PackedInt32Array(7, 8, 9), PackedInt32Array(9, 8, 4), PackedInt32Array(9, 4, 2), PackedInt32Array(9, 2, 0), PackedInt32Array(11, 10, 12), PackedInt32Array(12, 10, 13), PackedInt32Array(13, 10, 14), PackedInt32Array(17, 16, 15), PackedInt32Array(19, 18, 20), PackedInt32Array(20, 18, 21), PackedInt32Array(21, 18, 22), PackedInt32Array(25, 24, 23), PackedInt32Array(15, 27, 26), PackedInt32Array(26, 21, 15), PackedInt32Array(15, 21, 17), PackedInt32Array(14, 10, 28), PackedInt32Array(28, 10, 17), PackedInt32Array(28, 17, 30), PackedInt32Array(28, 30, 29), PackedInt32Array(17, 21, 30), PackedInt32Array(30, 21, 22), PackedInt32Array(30, 22, 25), PackedInt32Array(30, 25, 23), PackedInt32Array(5, 6, 23), PackedInt32Array(23, 6, 30), PackedInt32Array(31, 34, 32), PackedInt32Array(32, 34, 33), PackedInt32Array(2, 35, 1), PackedInt32Array(1, 35, 31), PackedInt32Array(31, 35, 34), PackedInt32Array(37, 36, 38), PackedInt32Array(38, 36, 39), PackedInt32Array(39, 36, 29), PackedInt32Array(39, 29, 9), PackedInt32Array(42, 41, 40), PackedInt32Array(36, 28, 29), PackedInt32Array(43, 9, 40), PackedInt32Array(40, 9, 42), PackedInt32Array(42, 9, 44), PackedInt32Array(9, 0, 44), PackedInt32Array(43, 39, 9), PackedInt32Array(38, 45, 37), PackedInt32Array(37, 45, 46), PackedInt32Array(46, 45, 47), PackedInt32Array(48, 40, 41), PackedInt32Array(51, 50, 49), PackedInt32Array(41, 51, 49), PackedInt32Array(55, 54, 52), PackedInt32Array(52, 54, 53), PackedInt32Array(49, 56, 41), PackedInt32Array(41, 56, 48), PackedInt32Array(48, 56, 57), PackedInt32Array(57, 56, 58), PackedInt32Array(55, 57, 54), PackedInt32Array(54, 57, 58), PackedInt32Array(47, 45, 57), PackedInt32Array(57, 45, 48), PackedInt32Array(59, 49, 50), PackedInt32Array(61, 60, 59), PackedInt32Array(50, 32, 59), PackedInt32Array(59, 32, 33), PackedInt32Array(59, 33, 62), PackedInt32Array(59, 62, 61), PackedInt32Array(64, 63, 65), PackedInt32Array(65, 63, 66), PackedInt32Array(72, 71, 67), PackedInt32Array(67, 71, 70), PackedInt32Array(67, 70, 68), PackedInt32Array(68, 70, 69), PackedInt32Array(66, 63, 73), PackedInt32Array(73, 63, 74), PackedInt32Array(70, 75, 69), PackedInt32Array(76, 73, 74), PackedInt32Array(26, 27, 76), PackedInt32Array(74, 77, 76), PackedInt32Array(76, 77, 71), PackedInt32Array(76, 71, 72), PackedInt32Array(76, 72, 26), PackedInt32Array(20, 67, 19), PackedInt32Array(19, 67, 68), PackedInt32Array(80, 79, 78), PackedInt32Array(65, 12, 13), PackedInt32Array(65, 13, 64), PackedInt32Array(64, 13, 81), PackedInt32Array(81, 46, 82), PackedInt32Array(82, 46, 78), PackedInt32Array(78, 46, 80), PackedInt32Array(80, 46, 47), PackedInt32Array(82, 64, 81), PackedInt32Array(77, 74, 78), PackedInt32Array(78, 74, 82), PackedInt32Array(83, 85, 61), PackedInt32Array(61, 85, 60), PackedInt32Array(60, 85, 84), PackedInt32Array(80, 86, 79), PackedInt32Array(79, 86, 75), PackedInt32Array(88, 87, 89), PackedInt32Array(89, 87, 90), PackedInt32Array(92, 91, 93), PackedInt32Array(93, 91, 75), PackedInt32Array(93, 75, 86), PackedInt32Array(93, 86, 53), PackedInt32Array(86, 52, 53), PackedInt32Array(89, 90, 53), PackedInt32Array(53, 90, 93), PackedInt32Array(91, 69, 75), PackedInt32Array(87, 88, 94), PackedInt32Array(94, 88, 96), PackedInt32Array(94, 96, 95), PackedInt32Array(84, 85, 97), PackedInt32Array(96, 58, 95), PackedInt32Array(95, 58, 97), PackedInt32Array(97, 58, 84), PackedInt32Array(84, 58, 56)]
 
 [sub_resource type="QuadMesh" id="QuadMesh_h2yge"]
+
+[sub_resource type="Gradient" id="Gradient_dg77c"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 0.1254902)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ycdy4"]
+gradient = SubResource("Gradient_dg77c")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dg77c"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(1, 500, 1)
+direction = Vector3(-1, 0, 0)
+spread = 0.0
+initial_velocity_min = 300.0
+initial_velocity_max = 300.0
+gravity = Vector3(0, 0, 0)
+color_initial_ramp = SubResource("GradientTexture1D_ycdy4")
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_4c57u")
@@ -114,7 +133,7 @@ transform = Transform3D(1, 0, 0, 0, 0.7071068, 0.7071068, 0, -0.7071068, 0.70710
 fov = 35.0
 size = 20.0
 
-[node name="Sprite3D" type="Sprite3D" parent="Camera3D"]
+[node name="Background" type="Sprite3D" parent="Camera3D"]
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, -60)
 texture = ExtResource("10_efxa6")
 
@@ -154,6 +173,27 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -7.5)
 
 [node name="Badguy9" parent="Badguys" instance=ExtResource("9_kek77")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -13)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="SubViewportContainer/SubViewport"]
+position = Vector2(1154, 324)
+amount = 100
+texture = ExtResource("12_dg77c")
+lifetime = 30.0
+process_material = SubResource("ParticleProcessMaterial_dg77c")
 
 [editable path="NavigationRegion3D/Obstacles/well_model"]
 [editable path="NavigationRegion3D/Obstacles/arch_model"]

@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0r8ywcbrsflp"]
+
+[ext_resource type="Texture2D" uid="uid://d30we168b8e7r" path="res://textures/happy_cloud.png" id="1_4xwbv"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4xwbv"]
+emission_shape_offset = Vector3(10, 0, 0)
+emission_shape_scale = Vector3(10, 10, 0.1)
+emission_shape = 3
+emission_box_extents = Vector3(0.1, 1, 1)
+direction = Vector3(-1, 0, 0)
+spread = 0.0
+initial_velocity_min = 0.099999994
+initial_velocity_max = 0.5
+gravity = Vector3(0, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dl3so"]
+albedo_texture = ExtResource("1_4xwbv")
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_potmy"]
+material = SubResource("StandardMaterial3D_dl3so")
+size = Vector2(10, 10)
+
+[node name="Clouds" type="GPUParticles3D"]
+lifetime = 15.0
+process_material = SubResource("ParticleProcessMaterial_4xwbv")
+draw_pass_1 = SubResource("QuadMesh_potmy")
