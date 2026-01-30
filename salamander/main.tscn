@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://d3l7dwjff10l3"]
+[gd_scene load_steps=26 format=3 uid="uid://d3l7dwjff10l3"]
 
 [ext_resource type="Script" uid="uid://ct0klyjd6wtmi" path="res://main.gd" id="1_4c57u"]
 [ext_resource type="PackedScene" uid="uid://c7gckhdb1qr1l" path="res://player.tscn" id="1_ig7tw"]
@@ -8,7 +8,7 @@
 [ext_resource type="Material" uid="uid://cr16i8aam1tyq" path="res://materials/arch_material.tres" id="6_272bh"]
 [ext_resource type="PackedScene" uid="uid://bxuch0fry4lh0" path="res://models/floor_model.fbx" id="7_272bh"]
 [ext_resource type="Material" uid="uid://ljpab7dn7d0o" path="res://materials/floor_material.tres" id="8_5vw27"]
-[ext_resource type="PackedScene" path="res://wall_model.tscn" id="9_efxa6"]
+[ext_resource type="PackedScene" uid="uid://hkuma8pf7fot" path="res://wall_model.tscn" id="9_efxa6"]
 [ext_resource type="PackedScene" uid="uid://3ofau3e2i0v1" path="res://badguy.tscn" id="9_kek77"]
 [ext_resource type="Texture2D" uid="uid://dcgiua51crecu" path="res://textures/skybox.png" id="10_efxa6"]
 [ext_resource type="Texture2D" uid="uid://ba6x4w4ewxom8" path="res://textures/cloud.png" id="12_dg77c"]
@@ -35,9 +35,39 @@ polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(4, 3, 2), PackedInt32Arr
 
 [sub_resource type="QuadMesh" id="QuadMesh_h2yge"]
 
+[sub_resource type="Curve" id="Curve_dg77c"]
+_data = [Vector2(0.107142866, 0), 0.0, 0.13857442, 0, 0, Vector2(0.5, 0.35872138), 0.051957235, 0.051957235, 0, 0, Vector2(0.9075631, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_ycdy4"]
+curve = SubResource("Curve_dg77c")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ycdy4"]
+emission_shape = 1
+emission_sphere_radius = 5.0
+angle_min = 1.0728835e-05
+angle_max = 180.00002
+spread = 180.0
+initial_velocity_max = 0.099999994
+angular_velocity_min = -200.00002
+angular_velocity_max = 199.99998
+gravity = Vector3(0, 0, 0)
+scale_max = 3.0
+color = Color(1, 1, 1, 0.047058824)
+alpha_curve = SubResource("CurveTexture_ycdy4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w48qg"]
+transparency = 1
+blend_mode = 1
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("12_dg77c")
+
+[sub_resource type="QuadMesh" id="QuadMesh_vivmo"]
+material = SubResource("StandardMaterial3D_w48qg")
+
 [sub_resource type="Gradient" id="Gradient_dg77c"]
 offsets = PackedFloat32Array(1)
-colors = PackedColorArray(1, 1, 1, 0.1254902)
+colors = PackedColorArray(1, 1, 1, 0.15686275)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_ycdy4"]
 gradient = SubResource("Gradient_dg77c")
@@ -46,11 +76,14 @@ gradient = SubResource("Gradient_dg77c")
 particle_flag_disable_z = true
 emission_shape = 3
 emission_box_extents = Vector3(1, 500, 1)
+angle_min = 1.0728835e-05
+angle_max = 180.00002
 direction = Vector3(-1, 0, 0)
 spread = 0.0
-initial_velocity_min = 300.0
-initial_velocity_max = 300.0
+initial_velocity_min = 10.0
+initial_velocity_max = 11.0
 gravity = Vector3(0, 0, 0)
+scale_min = 0.099999994
 color_initial_ramp = SubResource("GradientTexture1D_ycdy4")
 
 [node name="Main" type="Node3D"]
@@ -137,6 +170,14 @@ size = 20.0
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, -60)
 texture = ExtResource("10_efxa6")
 
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, -2)
+visible = false
+amount = 100
+lifetime = 4.0
+process_material = SubResource("ParticleProcessMaterial_ycdy4")
+draw_pass_1 = SubResource("QuadMesh_vivmo")
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.54463893, 0.83867055, 0, -0.83867055, 0.54463893, 0, 50, 37)
 light_energy = 0.333
@@ -175,6 +216,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -7.5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -13)
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -186,13 +228,14 @@ stretch = true
 transparent_bg = true
 handle_input_locally = false
 size = Vector2i(1152, 648)
-render_target_update_mode = 4
+render_target_update_mode = 0
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="SubViewportContainer/SubViewport"]
 position = Vector2(1154, 324)
 amount = 100
 texture = ExtResource("12_dg77c")
-lifetime = 30.0
+lifetime = 60.0
+preprocess = 60.0
 process_material = SubResource("ParticleProcessMaterial_dg77c")
 
 [editable path="NavigationRegion3D/Obstacles/well_model"]
