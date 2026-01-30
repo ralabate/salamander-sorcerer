@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://3ofau3e2i0v1"]
+[gd_scene load_steps=7 format=3 uid="uid://3ofau3e2i0v1"]
 
 [ext_resource type="Script" uid="uid://gl5mo83f81g6" path="res://badguy.gd" id="1_lf2yb"]
+[ext_resource type="Script" uid="uid://b00ria5xx3iic" path="res://navigation_component.gd" id="2_apgvv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lf2yb"]
 albedo_color = Color(1, 0, 1, 1)
@@ -14,6 +15,14 @@ material = SubResource("StandardMaterial3D_lf2yb")
 
 [node name="Badguy" type="CharacterBody3D"]
 script = ExtResource("1_lf2yb")
+
+[node name="NavigationComponent" type="Node" parent="." node_paths=PackedStringArray("navigation_agent")]
+unique_name_in_owner = true
+script = ExtResource("2_apgvv")
+navigation_agent = NodePath("../NavigationAgent3D")
+metadata/_custom_type_script = "uid://b00ria5xx3iic"
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

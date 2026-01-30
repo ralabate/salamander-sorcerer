@@ -4,7 +4,7 @@ extends CharacterBody3D
 const IDLE_STATE = "mando_idle"
 const SWIPE_STATE = "mando_swipe"
 
-const SPEED = 5.0
+const SPEED = 5
 
 var _animation_tree: AnimationTree
 var _state_machine: AnimationNodeStateMachinePlayback
