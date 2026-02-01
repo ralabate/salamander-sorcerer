@@ -4,6 +4,7 @@ class_name Badguy
 
 @onready var hit_area: Area3D = %HitArea
 @onready var navigation: NavigationComponent = %NavigationComponent
+@onready var visual: Visual = %SkullVisual
 
 
 func _ready() -> void:

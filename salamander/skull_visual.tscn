@@ -1,0 +1,56 @@
+[gd_scene load_steps=12 format=3 uid="uid://cjf48nh6j3dxu"]
+
+[ext_resource type="PackedScene" uid="uid://bba5j88mnqql" path="res://models/skull_model.fbx" id="1_carhr"]
+[ext_resource type="Script" uid="uid://cdntwhlvhy4xh" path="res://visual.gd" id="2_gdibd"]
+[ext_resource type="Animation" uid="uid://c5s35d4rn2mu8" path="res://animations/skull_animation_chomp.res" id="3_c0bon"]
+[ext_resource type="Animation" uid="uid://otoo34ph2at0" path="res://animations/skull_animation_hitstun.res" id="4_iwror"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0w1ws"]
+_data = {
+&"skull_animation_chomp": ExtResource("3_c0bon"),
+&"skull_animation_hitstun": ExtResource("4_iwror")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_carhr"]
+animation = &"skull/skull_animation_chomp"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gdibd"]
+animation = &"skull/skull_animation_hitstun"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_c0bon"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_iwror"]
+xfade_time = 0.1
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_carhr"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_0w1ws"]
+states/chomp/node = SubResource("AnimationNodeAnimation_carhr")
+states/chomp/position = Vector2(402, 74)
+states/hitstun/node = SubResource("AnimationNodeAnimation_gdibd")
+states/hitstun/position = Vector2(639, 68.5)
+transitions = ["chomp", "hitstun", SubResource("AnimationNodeStateMachineTransition_c0bon"), "hitstun", "chomp", SubResource("AnimationNodeStateMachineTransition_iwror"), "Start", "chomp", SubResource("AnimationNodeStateMachineTransition_carhr")]
+
+[node name="SkullVisual" instance=ExtResource("1_carhr")]
+script = ExtResource("2_gdibd")
+
+[node name="root_TRS" parent="." index="0"]
+transform = Transform3D(0.9996473, 0.02593975, 0.0056980117, -0.026558198, 0.9764391, 0.21415277, -8.691568e-06, -0.21422857, 0.97678363, 0, 0, 0)
+
+[node name="jaw_TRS" parent="root_TRS" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.5679697, -0.8230495, 0, 0.8230495, 0.5679697, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+unique_name_in_owner = true
+libraries = {
+&"skull": SubResource("AnimationLibrary_0w1ws")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="2"]
+unique_name_in_owner = true
+root_node = NodePath("%AnimationTree/..")
+tree_root = SubResource("AnimationNodeStateMachine_0w1ws")
+anim_player = NodePath("../AnimationPlayer")
