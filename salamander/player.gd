@@ -3,20 +3,18 @@ extends CharacterBody3D
 
 const IDLE_STATE = "mando_idle"
 const SWIPE_STATE = "mando_swipe"
+const SLEEP_STATE = "mando_sleep"
 
 const SPEED = 5
 
-var _animation_tree: AnimationTree
-var _state_machine: AnimationNodeStateMachinePlayback
-
 @onready var visual: Visual = %SalamanderVisual
+@onready var idle_timer: Timer = %IdleTimer
 
 
 func _ready() -> void:
-	_animation_tree = visual.get_node("AnimationTree") as AnimationTree
-	_state_machine = _animation_tree.get("parameters/playback")
-
-	_state_machine.travel(IDLE_STATE)
+	visual.set_animation_state(IDLE_STATE)
+	idle_timer.timeout.connect(_on_idle_timer_timeout)
+	idle_timer.start()
 
 
 func _physics_process(delta: float) -> void:
@@ -25,25 +23,28 @@ func _physics_process(delta: float) -> void:
 
 	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction and _state_machine.get_current_node() != SWIPE_STATE:
+	if direction and visual.get_animation_state() != SWIPE_STATE:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
 		visual.is_moving = true
+		if not idle_timer.is_stopped():
+			idle_timer.stop()
 	else:
 		velocity.x = 0
 		velocity.z = 0
 		visual.is_moving = false
-	
+		if idle_timer.is_stopped():
+			idle_timer.start()
+
 	visual.is_moving = direction != Vector3.ZERO
 	if direction != Vector3.ZERO:
 		visual.look_at(visual.global_position + direction, Vector3.UP, true)
 
 	if Input.is_action_just_pressed("ui_accept"):
-		_state_machine.travel(SWIPE_STATE)
+		visual.set_animation_state(SWIPE_STATE)
 
 	move_and_slide()
 
 
-func _on_body_entered_sword_area(body: Node3D) -> void:
-	if body and _state_machine.get_current_node() == SWIPE_STATE:
-		print("yo")
+func _on_idle_timer_timeout() -> void:
+	visual.set_animation_state(SLEEP_STATE)

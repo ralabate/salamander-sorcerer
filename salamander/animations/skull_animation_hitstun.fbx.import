@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://djc5c6sl87teo"
-path="res://.godot/imported/mando_animation_fall_asleep.fbx-2cd5ded486badc24906c0dffe8339610.scn"
+uid="uid://bh6h8klpa2qcv"
+path="res://.godot/imported/skull_animation_hitstun.fbx-4be047b3d938d078957d4f8773f7f7c0.scn"
 
 [deps]
 
-source_file="res://animations/mando_animation_fall_asleep.fbx"
-dest_files=["res://.godot/imported/mando_animation_fall_asleep.fbx-2cd5ded486badc24906c0dffe8339610.scn"]
+source_file="res://animations/skull_animation_hitstun.fbx"
+dest_files=["res://.godot/imported/skull_animation_hitstun.fbx-4be047b3d938d078957d4f8773f7f7c0.scn"]
 
 [params]
 
@@ -39,11 +39,11 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "animations": {
-"fall_asleep": {
+"hitstun": {
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://animations/mando_animation_fall_asleep.res",
+"save_to_file/fallback_path": "res://animations/skull_animation_hitstun.res",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "uid://bxm7rwubp8r7t",
+"save_to_file/path": "uid://otoo34ph2at0",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,

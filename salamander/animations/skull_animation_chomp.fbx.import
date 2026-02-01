@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://djc5c6sl87teo"
-path="res://.godot/imported/mando_animation_fall_asleep.fbx-2cd5ded486badc24906c0dffe8339610.scn"
+uid="uid://dunw7x7iql1ek"
+path="res://.godot/imported/skull_animation_chomp.fbx-01d13ca38a32ba6ab01c3e2a601d564b.scn"
 
 [deps]
 
-source_file="res://animations/mando_animation_fall_asleep.fbx"
-dest_files=["res://.godot/imported/mando_animation_fall_asleep.fbx-2cd5ded486badc24906c0dffe8339610.scn"]
+source_file="res://animations/skull_animation_chomp.fbx"
+dest_files=["res://.godot/imported/skull_animation_chomp.fbx-01d13ca38a32ba6ab01c3e2a601d564b.scn"]
 
 [params]
 
@@ -39,11 +39,11 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "animations": {
-"fall_asleep": {
+"chomp": {
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://animations/mando_animation_fall_asleep.res",
+"save_to_file/fallback_path": "res://animations/skull_animation_chomp.res",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "uid://bxm7rwubp8r7t",
+"save_to_file/path": "uid://c5s35d4rn2mu8",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,
